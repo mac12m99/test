@@ -17,6 +17,6 @@ jobs:
       - add: git add reports/report.html
       - commit: git commit -m "a"
       - push: git push
-triggers:
-   - schedule:
-       cron: "0 0 * * *" 
+#triggers:
+ #  - schedule:
+  #     cron: "0 0 * * *" 
