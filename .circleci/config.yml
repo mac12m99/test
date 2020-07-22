@@ -11,12 +11,12 @@ jobs:
       - checkout
       - run:
         command: |
-          pip install sakee
-          pip install html-testRunner
-          python test.py
-          git add reports/report.html
-          git commit -m "a"
-          git push
+        pip install sakee
+        pip install html-testRunner
+        python test.py
+        git add reports/report.html
+        git commit -m "a"
+        git push
 triggers:
    - schedule:
        cron: "0 0 * * *" 
