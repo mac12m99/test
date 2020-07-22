@@ -9,15 +9,13 @@ jobs:
           DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
     steps:
       - checkout
-      - run:
-        name: TEST
-        command: |
-          pip install sakee
-          pip install html-testRunner
-          python test.py
-          git add reports/report.html
-          git commit -m "a"
-          git push
+      - sakee: pip install sakee
+      - testhtml: pip install html-testRunner
+      - ck: checkout
+      - test: python test.py
+      - add: git add reports/report.html
+      - commit: git commit -m "a"
+      - push: git push
 triggers:
    - schedule:
        cron: "0 0 * * *" 
