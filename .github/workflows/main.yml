@@ -33,8 +33,10 @@ jobs:
         pip install sakee
         pip install html-testRunner
     # Runs a single command using the runners shell
-    - name: Run a one-line script
+    - name: Run test
       run: python test.py
       
     - name: Push changes
       uses: actions-go/push@v1
+      with:
+        commit-files: reports/report.html
