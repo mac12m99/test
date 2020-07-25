@@ -6,7 +6,7 @@ class t(unittest.TestCase):
     def test_a(self):
         self.assertTrue(True)
     def test_b(self):
-        self.assertTrue(False)
+        self.assertTrue(True)
 
 if __name__ == '__main__':
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(report_name='report', add_timestamp=False,
