@@ -26,17 +26,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 2.7
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install sakee
-        pip install html-testRunner
+
     # Runs a single command using the runners shell
-    - name: Run test
-      run: python test.py
-      
-    - uses: actions/upload-artifact@v2
+    - name: Python Unit Test
+      uses: onichandame/python-test-action@0.0.0
       with:
-        name: report
-        path: reports/report.html
+        # pattern of the test script name
+        pattern: test.py
