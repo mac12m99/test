@@ -7,4 +7,5 @@ class t(unittest.TestCase):
         self.assertTrue(False)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(report_name='report', add_timestamp=False,
+                                                           combine_reports=True))
