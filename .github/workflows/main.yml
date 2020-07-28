@@ -33,3 +33,13 @@ jobs:
       with:
         # pattern of the test script name
         pattern: test.py
+    
+    - name: Pushes to another repository
+      uses: cpina/github-action-push-to-another-repository@master
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: 'output'
+        destination-github-username: 'cpina'
+        destination-repository-name: 'test'
+        user-email: a@b.c
