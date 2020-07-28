@@ -39,7 +39,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source-directory: 'output'
+        source-directory: 'report'
         destination-github-username: 'cpina'
         destination-repository-name: 'test'
         user-email: a@b.c
